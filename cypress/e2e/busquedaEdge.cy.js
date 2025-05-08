@@ -29,6 +29,15 @@ describe('Motor de búsqueda y ordenamiento en página Personal', () => {
       .first()
       .should('contain.text', 'Incluye accesorios');
   });
+  it('Debe aplicar el filtro de 6 cuotas sin interés y verificar que se refleje en los productos', () => {
+    cy.visit('https://tienda.personal.com.ar/resultados?q=edge&order=Menor+precio');
+  
+
+    cy.get('div._2oahu7b').first().click();
+  
+    cy.wait(2000);
+  
+  });
   
 });
 
